@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import {useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-firebase-hooks/auth';
 import auth from '../../shared/Firebase/Firebase.init';
 const SignUp = () => {
     
@@ -11,19 +11,21 @@ const SignUp = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+      const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-      if(error){
-          console.log('error from hook', error.message);
+      if(error || updateError){
+          console.log('error from hook', error.message || updateError.message);
           return;
       }
-      if(loading){
+      if(loading || updating){
           return <p>Loading...</p>
       }
       if(user){
-          return <p>user is regestered</p>
+          console.log(user);
+          return <p>{user.user.displayName} is regestered</p>
       }
 
-    const handleSignUp = (e) =>{
+    const  handleSignUp = async (e) =>{
         e.preventDefault();
 
         const name = e.target.name.value;
@@ -31,7 +33,9 @@ const SignUp = () => {
         const password = e.target.password.value;
         console.log(name, email, password);
 
-        createUserWithEmailAndPassword(email, password);
+       await createUserWithEmailAndPassword(email, password);
+       await updateProfile({displayName: name});
+
     }
 
     return (
