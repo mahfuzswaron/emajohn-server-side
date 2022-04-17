@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-firebase-hooks/auth';
 import auth from '../../shared/Firebase/Firebase.init';
 const SignUp = () => {
@@ -11,7 +11,9 @@ const SignUp = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+      const navigate = useNavigate();
 
       if(error || updateError){
           console.log('error from hook', error.message || updateError.message);
@@ -35,6 +37,7 @@ const SignUp = () => {
 
        await createUserWithEmailAndPassword(email, password);
        await updateProfile({displayName: name});
+       navigate('/login');
 
     }
 

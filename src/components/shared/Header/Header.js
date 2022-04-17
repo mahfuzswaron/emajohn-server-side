@@ -14,7 +14,7 @@ const Header = () => {
 
 
     return (
-    <Navbar bg="primary" variant="dark">
+    <Navbar bg="primary" sticky='top' variant="dark">
     <Container>
         <Navbar.Brand as={Link} to="/">DOCK ONLINE</Navbar.Brand>
         <Nav className="me-auto">

@@ -13,7 +13,7 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.form?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
     if(error ){
         console.log('error from hook', error.message);
@@ -28,7 +28,6 @@ const Login = () => {
         console.log(user);
         return <p>{user.user.displayName} is regestered</p>
     }
-
     const handleSignIn = (e) =>{
         e.preventDefault();
 
