@@ -1,14 +1,37 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import auth from '../../shared/Firebase/Firebase.init';
 const SignUp = () => {
+    
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
+      if(error){
+          console.log('error from hook', error.message);
+          return;
+      }
+      if(loading){
+          return <p>Loading...</p>
+      }
+      if(user){
+          return <p>user is regestered</p>
+      }
+
     const handleSignUp = (e) =>{
         e.preventDefault();
 
         const name = e.target.name.value;
         const email = e.target.email.value;
-        console.log(name, email)
+        const password = e.target.password.value;
+        console.log(name, email, password);
+
+        createUserWithEmailAndPassword(email, password);
     }
 
     return (

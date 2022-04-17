@@ -1,0 +1,381 @@
+[debug] [2022-04-17T13:26:02.460Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T13:26:02.465Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-04-17T13:26:02.467Z] CLI Version:   10.6.0
+[debug] [2022-04-17T13:26:02.467Z] Platform:      linux
+[debug] [2022-04-17T13:26:02.468Z] Node Version:  v17.8.0
+[debug] [2022-04-17T13:26:02.469Z] Time:          Sun Apr 17 2022 19:26:02 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-04-17T13:26:02.470Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T13:26:02.679Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T13:26:02.681Z] > authorizing via signed-in user (mahfuzswaron@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/genious/Projects/doc-online
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-04-17T13:26:10.585Z] Using project from CLI flag: doc-online-1
+[debug] [2022-04-17T13:26:10.592Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T13:26:10.596Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:26:11.737Z] <<< HTTP RESPONSE 200 {"date":"Sun, 17 Apr 2022 13:26:13 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:26:11.883Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:26:16.834Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:26:16.836Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[info] i  Using project doc-online-1 (doc-online) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-04-17T13:27:38.404Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-04-17T13:27:39.039Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-04-17T13:27:39.040Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.11","browserURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.11/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.11/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.11/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.11/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.11/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.11/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.11/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.11/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.memory.js"}}
+[info] ✔  Wrote build/index.html 
+[info] 
+[info] i  Writing configuration info to firebase.json... 
+[info] i  Writing project information to .firebaserc... 
+[info] 
+[info] ✔  Firebase initialization complete! 
+[debug] [2022-04-17T13:29:29.908Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T13:29:29.913Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-04-17T13:29:29.915Z] CLI Version:   10.6.0
+[debug] [2022-04-17T13:29:29.915Z] Platform:      linux
+[debug] [2022-04-17T13:29:29.916Z] Node Version:  v17.8.0
+[debug] [2022-04-17T13:29:29.917Z] Time:          Sun Apr 17 2022 19:29:29 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-04-17T13:29:29.918Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T13:29:30.137Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T13:29:30.138Z] > authorizing via signed-in user (mahfuzswaron@gmail.com)
+[debug] [2022-04-17T13:29:30.138Z] [iam] checking project doc-online-1 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2022-04-17T13:29:30.145Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions [none]
+[debug] [2022-04-17T13:29:30.146Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-17T13:29:32.325Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions 200
+[debug] [2022-04-17T13:29:32.326Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-17T13:29:32.330Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:29:34.185Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:29:34.187Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-17T13:29:34.189Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:29:34.990Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:29:34.992Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'doc-online-1'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2022-04-17T13:29:35.041Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-17T13:29:35.044Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:29:35.671Z] <<< HTTP RESPONSE 200 {"date":"Sun, 17 Apr 2022 13:29:38 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:29:35.810Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/doc-online-1/locations/-/instances/doc-online-1-default-rtdb  
+ 
+[debug] [2022-04-17T13:29:38.211Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 17 Apr 2022 13:29:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:29:38.223Z] >>> HTTP REQUEST PUT https://doc-online-1-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-17T13:29:39.139Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 17 Apr 2022 13:29:41 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database doc-online-1-default-rtdb is valid 
+[debug] [2022-04-17T13:29:39.155Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T13:29:39.157Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:29:39.709Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 17 Apr 2022 13:29:42 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:29:39.847Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:29:40.957Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:29:40.958Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-17T13:29:40.975Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions [none]
+[debug] [2022-04-17T13:29:40.976Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-04-17T13:29:46.924Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions 200
+[debug] [2022-04-17T13:29:46.927Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions {"name":"projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[doc-online-1]: beginning deploy... 
+[info] i  hosting[doc-online-1]: found 17 files in build 
+[debug] [2022-04-17T13:29:47.007Z] [hosting] uploading with 200 concurrency
+[debug] [2022-04-17T13:29:47.010Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2022-04-17T13:29:47.477Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2022-04-17T13:29:47.478Z] [hosting][hash queue][FINAL] {"max":442,"min":169,"avg":208.58823529411765,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":466}
+[debug] [2022-04-17T13:29:47.480Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f:populateFiles [none]
+[debug] [2022-04-17T13:29:47.481Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f:populateFiles {"files":{"/index.html":"75968c6b13a1dde323d897aeba7b5740d7db0f1b326a0bb08ac8e9ab2a479df1","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/Services.json":"2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf","/asset-manifest.json":"a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/static/css/main.073c9b0a.css":"2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0","/static/css/main.073c9b0a.css.map":"c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0","/static/js/787.14a73b22.chunk.js":"2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8","/static/js/787.14a73b22.chunk.js.map":"985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45","/static/js/main.fe731f17.js.LICENSE.txt":"df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b","/images/service.jpg":"57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429","/static/js/main.fe731f17.js":"465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba","/images/banner.png":"f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd","/static/js/main.fe731f17.js.map":"e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0"}}
+[debug] [2022-04-17T13:29:49.680Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f:populateFiles 200
+[debug] [2022-04-17T13:29:49.682Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f:populateFiles {"uploadRequiredHashes":["985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45","0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0","e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0","a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe","2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf","c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429","75968c6b13a1dde323d897aeba7b5740d7db0f1b326a0bb08ac8e9ab2a479df1","2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8","465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba","df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b","7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd","2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files"}
+[debug] [2022-04-17T13:29:49.706Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45 [none]
+[debug] [2022-04-17T13:29:49.706Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45 [stream]
+[debug] [2022-04-17T13:29:49.730Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 [none]
+[debug] [2022-04-17T13:29:49.731Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 [stream]
+[debug] [2022-04-17T13:29:49.753Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0 [none]
+[debug] [2022-04-17T13:29:49.753Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0 [stream]
+[debug] [2022-04-17T13:29:49.770Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0 [none]
+[debug] [2022-04-17T13:29:49.771Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0 [stream]
+[debug] [2022-04-17T13:29:49.786Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe [none]
+[debug] [2022-04-17T13:29:49.786Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe [stream]
+[debug] [2022-04-17T13:29:49.801Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf [none]
+[debug] [2022-04-17T13:29:49.801Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf [stream]
+[debug] [2022-04-17T13:29:49.817Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 [none]
+[debug] [2022-04-17T13:29:49.817Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 [stream]
+[debug] [2022-04-17T13:29:49.834Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429 [none]
+[debug] [2022-04-17T13:29:49.834Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429 [stream]
+[debug] [2022-04-17T13:29:49.849Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/75968c6b13a1dde323d897aeba7b5740d7db0f1b326a0bb08ac8e9ab2a479df1 [none]
+[debug] [2022-04-17T13:29:49.849Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/75968c6b13a1dde323d897aeba7b5740d7db0f1b326a0bb08ac8e9ab2a479df1 [stream]
+[debug] [2022-04-17T13:29:49.864Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8 [none]
+[debug] [2022-04-17T13:29:49.864Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8 [stream]
+[debug] [2022-04-17T13:29:49.878Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba [none]
+[debug] [2022-04-17T13:29:49.879Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba [stream]
+[debug] [2022-04-17T13:29:49.892Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b [none]
+[debug] [2022-04-17T13:29:49.892Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b [stream]
+[debug] [2022-04-17T13:29:49.907Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 [none]
+[debug] [2022-04-17T13:29:49.907Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 [stream]
+[debug] [2022-04-17T13:29:49.921Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd [none]
+[debug] [2022-04-17T13:29:49.922Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd [stream]
+[debug] [2022-04-17T13:29:49.936Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec [none]
+[debug] [2022-04-17T13:29:49.937Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec [stream]
+[debug] [2022-04-17T13:29:49.951Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd [none]
+[debug] [2022-04-17T13:29:49.951Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd [stream]
+[debug] [2022-04-17T13:29:49.965Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0 [none]
+[debug] [2022-04-17T13:29:49.965Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0 [stream]
+[debug] [2022-04-17T13:29:49.979Z] [hosting][populate queue][FINAL] {"max":2232,"min":2232,"avg":2232,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2506}
+[debug] [2022-04-17T13:29:49.980Z] [hosting] uploads queued: 17
+[debug] [2022-04-17T13:29:54.710Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 200
+[debug] [2022-04-17T13:29:54.711Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1 [stream]
+[debug] [2022-04-17T13:29:54.727Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 200
+[debug] [2022-04-17T13:29:54.729Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06 [stream]
+[debug] [2022-04-17T13:29:54.733Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/75968c6b13a1dde323d897aeba7b5740d7db0f1b326a0bb08ac8e9ab2a479df1 200
+[debug] [2022-04-17T13:29:54.733Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/75968c6b13a1dde323d897aeba7b5740d7db0f1b326a0bb08ac8e9ab2a479df1 [stream]
+[debug] [2022-04-17T13:29:54.745Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec 200
+[debug] [2022-04-17T13:29:54.745Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec [stream]
+[debug] [2022-04-17T13:29:54.755Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45 200
+[debug] [2022-04-17T13:29:54.756Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45 [stream]
+[debug] [2022-04-17T13:29:54.767Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8 200
+[debug] [2022-04-17T13:29:54.767Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8 [stream]
+[debug] [2022-04-17T13:29:54.777Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf 200
+[debug] [2022-04-17T13:29:54.777Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf [stream]
+[debug] [2022-04-17T13:29:54.837Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0 200
+[debug] [2022-04-17T13:29:54.838Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0 [stream]
+[debug] [2022-04-17T13:29:54.986Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b 200
+[debug] [2022-04-17T13:29:54.987Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b [stream]
+[debug] [2022-04-17T13:29:55.185Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd 200
+[debug] [2022-04-17T13:29:55.186Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd [stream]
+[debug] [2022-04-17T13:29:55.379Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe 200
+[debug] [2022-04-17T13:29:55.380Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe [stream]
+[debug] [2022-04-17T13:29:56.226Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba 200
+[debug] [2022-04-17T13:29:56.227Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba [stream]
+[debug] [2022-04-17T13:29:57.201Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0 200
+[debug] [2022-04-17T13:29:57.203Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0 [stream]
+[debug] [2022-04-17T13:29:57.801Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429 200
+[debug] [2022-04-17T13:29:57.802Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429 [stream]
+[debug] [2022-04-17T13:29:57.899Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 200
+[debug] [2022-04-17T13:29:57.901Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205 [stream]
+[debug] [2022-04-17T13:29:58.254Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0 200
+[debug] [2022-04-17T13:29:58.256Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0 [stream]
+[debug] [2022-04-17T13:29:59.675Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd 200
+[debug] [2022-04-17T13:29:59.677Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/ea448d36e917d34f/files/f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd [stream]
+[debug] [2022-04-17T13:29:59.679Z] [hosting][upload queue][FINAL] {"max":9977,"min":5027,"avg":6228.764705882353,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":9996}
+[info] ✔  hosting[doc-online-1]: file upload complete 
+[debug] [2022-04-17T13:29:59.683Z] [hosting] deploy completed after 12748ms
+[info] i  database: releasing rules... 
+[debug] [2022-04-17T13:29:59.748Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-17T13:29:59.748Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:30:02.077Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 17 Apr 2022 13:30:03 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:30:02.199Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/doc-online-1/locations/-/instances/doc-online-1-default-rtdb  
+ 
+[debug] [2022-04-17T13:30:04.007Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 17 Apr 2022 13:30:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:30:04.015Z] >>> HTTP REQUEST PUT https://doc-online-1-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-17T13:30:05.063Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 17 Apr 2022 13:30:07 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules for database doc-online-1-default-rtdb released successfully 
+[debug] [2022-04-17T13:30:05.068Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "doc-online-1"
+    },
+    "site": "doc-online-1",
+    "version": "projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f"
+  }
+]
+[info] i  hosting[doc-online-1]: finalizing version... 
+[debug] [2022-04-17T13:30:05.073Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T13:30:05.075Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:30:06.907Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 17 Apr 2022 13:30:09 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:30:07.055Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f updateMask=status
+[debug] [2022-04-17T13:30:07.056Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f {"status":"FINALIZED"}
+[debug] [2022-04-17T13:30:13.866Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f 200
+[debug] [2022-04-17T13:30:13.868Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f {"name":"projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-17T13:29:48.788293Z","createUser":{"email":"mahfuzswaron@gmail.com"},"finalizeTime":"2022-04-17T13:30:16.331508Z","finalizeUser":{"email":"mahfuzswaron@gmail.com"}}
+[debug] [2022-04-17T13:30:13.869Z] [hosting] finalized version for doc-online-1:[object Object]
+[info] ✔  hosting[doc-online-1]: version finalized 
+[info] i  hosting[doc-online-1]: releasing new version... 
+[debug] [2022-04-17T13:30:13.874Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases versionName=projects%2F475420338838%2Fsites%2Fdoc-online-1%2Fversions%2Fea448d36e917d34f
+[debug] [2022-04-17T13:30:13.875Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases {"message":null}
+[debug] [2022-04-17T13:30:17.690Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases 200
+[debug] [2022-04-17T13:30:17.691Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases {"name":"projects/475420338838/sites/doc-online-1/releases/1650202218627201","version":{"name":"projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-17T13:29:48.788293Z","createUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"},"finalizeTime":"2022-04-17T13:30:16.331508Z","finalizeUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}},"type":"DEPLOY","releaseTime":"2022-04-17T13:30:18.627201676Z","releaseUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}}
+[debug] [2022-04-17T13:30:17.693Z] [hosting] release: {"name":"projects/475420338838/sites/doc-online-1/releases/1650202218627201","version":{"name":"projects/475420338838/sites/doc-online-1/versions/ea448d36e917d34f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-17T13:29:48.788293Z","createUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"},"finalizeTime":"2022-04-17T13:30:16.331508Z","finalizeUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}},"type":"DEPLOY","releaseTime":"2022-04-17T13:30:18.627201676Z","releaseUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}}
+[info] ✔  hosting[doc-online-1]: release complete 
+[debug] [2022-04-17T13:39:53.940Z] ----------------------------------------------------------------------
+[debug] [2022-04-17T13:39:53.946Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-04-17T13:39:53.947Z] CLI Version:   10.6.0
+[debug] [2022-04-17T13:39:53.947Z] Platform:      linux
+[debug] [2022-04-17T13:39:53.948Z] Node Version:  v17.8.0
+[debug] [2022-04-17T13:39:54.033Z] Time:          Sun Apr 17 2022 19:39:53 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-04-17T13:39:54.035Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-17T13:39:54.326Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-17T13:39:54.327Z] > authorizing via signed-in user (mahfuzswaron@gmail.com)
+[debug] [2022-04-17T13:39:54.328Z] [iam] checking project doc-online-1 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2022-04-17T13:39:54.365Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions [none]
+[debug] [2022-04-17T13:39:54.366Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-17T13:39:56.576Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions 200
+[debug] [2022-04-17T13:39:56.577Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/doc-online-1:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2022-04-17T13:39:56.584Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:39:57.541Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:39:57.544Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-17T13:39:57.547Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:39:58.875Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:39:58.878Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'doc-online-1'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2022-04-17T13:39:58.915Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-17T13:39:58.917Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:40:00.168Z] <<< HTTP RESPONSE 200 {"date":"Sun, 17 Apr 2022 13:40:02 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:40:00.342Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/doc-online-1/locations/-/instances/doc-online-1-default-rtdb  
+ 
+[debug] [2022-04-17T13:40:06.355Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 17 Apr 2022 13:40:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:40:06.368Z] >>> HTTP REQUEST PUT https://doc-online-1-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-17T13:40:07.459Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 17 Apr 2022 13:40:09 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database doc-online-1-default-rtdb is valid 
+[debug] [2022-04-17T13:40:07.475Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T13:40:07.478Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:40:08.141Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Sun, 17 Apr 2022 13:40:10 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:40:08.332Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 [none]
+[debug] [2022-04-17T13:40:09.110Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 200
+[debug] [2022-04-17T13:40:09.111Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/doc-online-1 {"projectId":"doc-online-1","projectNumber":"475420338838","displayName":"doc-online","name":"projects/doc-online-1","resources":{"hostingSite":"doc-online-1","realtimeDatabaseInstance":"doc-online-1-default-rtdb"},"state":"ACTIVE"}
+[debug] [2022-04-17T13:40:09.135Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions [none]
+[debug] [2022-04-17T13:40:09.137Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-04-17T13:40:11.377Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions 200
+[debug] [2022-04-17T13:40:11.379Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions {"name":"projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[doc-online-1]: beginning deploy... 
+[info] i  hosting[doc-online-1]: found 17 files in build 
+[debug] [2022-04-17T13:40:11.463Z] [hosting] uploading with 200 concurrency
+[debug] [2022-04-17T13:40:11.856Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2022-04-17T13:40:11.857Z] [hosting][hash queue][FINAL] {"max":364,"min":75,"avg":105.3529411764706,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":389}
+[debug] [2022-04-17T13:40:11.858Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033:populateFiles [none]
+[debug] [2022-04-17T13:40:11.859Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033:populateFiles {"files":{"/Services.json":"2ce267bd093c8e7b4f319d14511a465096a144e1cd8cfd8d8455a50f4649fbbf","/asset-manifest.json":"a0448cc6477a8369bf97b760048794a4029843f36ab809847eafaaa30816fbfe","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/index.html":"8713ca4e24d7ed882093064c6d874586cb92054c229a815a879c8f62c26909ad","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/static/css/main.073c9b0a.css":"2c5f9da097c6bd27b92f090d992ea88a7288ee71f857999f71979f09efe93ac0","/static/css/main.073c9b0a.css.map":"c29380832e513bc7d8110ec0ffd7e65b4772b3c144cf5ad56b4497f21e1482e0","/static/js/787.14a73b22.chunk.js":"2c2524a07012dc4ad4be9bb2640574f023945e07566f9433154cb886cfe647d8","/static/js/787.14a73b22.chunk.js.map":"985a8af8d583e9e76559388c41afb9774d4acb01e23b550d6c80e9be28661c45","/static/js/main.fe731f17.js.LICENSE.txt":"df667668c8c8f6a461a0c04fb4f1b77afa85581b27e95462398ef7efc9257a7b","/images/service.jpg":"57498b9b97c145cf0008deda9b9c6b3d249034de747bfdd652c7c37093118429","/static/js/main.fe731f17.js":"465e79dd544b1ffeaf4db2700bbf4cb914f7a2dd523f71b1a5997153bb3347ba","/images/banner.png":"f149e15a5db68eafce37217909175969c6ec31881cac43286fc7e06ebe9f0dcd","/static/js/main.fe731f17.js.map":"e9b805ddd6d01e496a33558c0accdeccd5d1df3d2cd3333b68855d569b8eaaa0"}}
+[debug] [2022-04-17T13:40:13.638Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033:populateFiles 200
+[debug] [2022-04-17T13:40:13.639Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033:populateFiles {"uploadRequiredHashes":["8713ca4e24d7ed882093064c6d874586cb92054c229a815a879c8f62c26909ad"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/90b9912575a0e033/files"}
+[debug] [2022-04-17T13:40:13.644Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/90b9912575a0e033/files/8713ca4e24d7ed882093064c6d874586cb92054c229a815a879c8f62c26909ad [none]
+[debug] [2022-04-17T13:40:13.644Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/90b9912575a0e033/files/8713ca4e24d7ed882093064c6d874586cb92054c229a815a879c8f62c26909ad [stream]
+[debug] [2022-04-17T13:40:13.685Z] [hosting][populate queue][FINAL] {"max":1790,"min":1790,"avg":1790,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1833}
+[debug] [2022-04-17T13:40:13.686Z] [hosting] uploads queued: 1
+[debug] [2022-04-17T13:40:18.217Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/90b9912575a0e033/files/8713ca4e24d7ed882093064c6d874586cb92054c229a815a879c8f62c26909ad 200
+[debug] [2022-04-17T13:40:18.219Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/doc-online-1/versions/90b9912575a0e033/files/8713ca4e24d7ed882093064c6d874586cb92054c229a815a879c8f62c26909ad [stream]
+[debug] [2022-04-17T13:40:18.221Z] [hosting][upload queue][FINAL] {"max":4580,"min":4580,"avg":4580,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":4581}
+[info] ✔  hosting[doc-online-1]: file upload complete 
+[debug] [2022-04-17T13:40:18.224Z] [hosting] deploy completed after 6838ms
+[info] i  database: releasing rules... 
+[debug] [2022-04-17T13:40:18.292Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-04-17T13:40:18.293Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:40:19.372Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 17 Apr 2022 13:40:21 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:40:19.513Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/doc-online-1/locations/-/instances/doc-online-1-default-rtdb  
+ 
+[debug] [2022-04-17T13:40:20.816Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 17 Apr 2022 13:40:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:40:20.827Z] >>> HTTP REQUEST PUT https://doc-online-1-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2022-04-17T13:40:21.617Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Sun, 17 Apr 2022 13:40:24 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules for database doc-online-1-default-rtdb released successfully 
+[debug] [2022-04-17T13:40:21.623Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "doc-online-1"
+    },
+    "site": "doc-online-1",
+    "version": "projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033"
+  }
+]
+[info] i  hosting[doc-online-1]: finalizing version... 
+[debug] [2022-04-17T13:40:21.629Z] > refreshing access token with scopes: []
+[debug] [2022-04-17T13:40:21.630Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-17T13:40:22.903Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 17 Apr 2022 13:40:25 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-17T13:40:23.099Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033 updateMask=status
+[debug] [2022-04-17T13:40:23.100Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033 {"status":"FINALIZED"}
+[debug] [2022-04-17T13:40:25.181Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033 200
+[debug] [2022-04-17T13:40:25.187Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033 {"name":"projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-17T13:40:13.476092Z","createUser":{"email":"mahfuzswaron@gmail.com"},"finalizeTime":"2022-04-17T13:40:27.667162Z","finalizeUser":{"email":"mahfuzswaron@gmail.com"}}
+[debug] [2022-04-17T13:40:25.188Z] [hosting] finalized version for doc-online-1:[object Object]
+[info] ✔  hosting[doc-online-1]: version finalized 
+[info] i  hosting[doc-online-1]: releasing new version... 
+[debug] [2022-04-17T13:40:25.192Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases versionName=projects%2F475420338838%2Fsites%2Fdoc-online-1%2Fversions%2F90b9912575a0e033
+[debug] [2022-04-17T13:40:25.193Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases {"message":null}
+[debug] [2022-04-17T13:40:27.057Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases 200
+[debug] [2022-04-17T13:40:27.059Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/475420338838/sites/doc-online-1/releases {"name":"projects/475420338838/sites/doc-online-1/releases/1650202828887632","version":{"name":"projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-17T13:40:13.476092Z","createUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"},"finalizeTime":"2022-04-17T13:40:27.667162Z","finalizeUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}},"type":"DEPLOY","releaseTime":"2022-04-17T13:40:28.887632512Z","releaseUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}}
+[debug] [2022-04-17T13:40:27.059Z] [hosting] release: {"name":"projects/475420338838/sites/doc-online-1/releases/1650202828887632","version":{"name":"projects/475420338838/sites/doc-online-1/versions/90b9912575a0e033","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-04-17T13:40:13.476092Z","createUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"},"finalizeTime":"2022-04-17T13:40:27.667162Z","finalizeUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}},"type":"DEPLOY","releaseTime":"2022-04-17T13:40:28.887632512Z","releaseUser":{"email":"mahfuzswaron@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GiNAx-0Smat0JN_8mHZ7xOCb_Cn47hD1OIV5Rpg"}}
+[info] ✔  hosting[doc-online-1]: release complete 
