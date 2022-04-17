@@ -1,5 +1,6 @@
 import React from 'react';
-import banner from '../../../../images/banner.png'
+import banner from '../../../../images/banner.png';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
@@ -7,6 +8,10 @@ const Home = () => {
             <div className='d-flex justify-content-center '>
              <img src={banner} alt='banner' />
             </div>
+            <article>
+               <Services></Services>
+
+            </article>
         </div>
     );
 };
