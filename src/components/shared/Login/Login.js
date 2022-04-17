@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../shared/Firebase/Firebase.init';
@@ -11,17 +11,24 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-      if(error ){
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.form?.pathname || '/';
+
+    if(error ){
         console.log('error from hook', error.message);
         return <p>invalid email or password</p>
     }
+
     if(loading){
         return <p>Loading...</p>
     }
+
     if(user){
         console.log(user);
         return <p>{user.user.displayName} is regestered</p>
     }
+
     const handleSignIn = (e) =>{
         e.preventDefault();
 
@@ -30,12 +37,13 @@ const Login = () => {
         console.log(email, password);
 
         signInWithEmailAndPassword(email, password)
+        navigate(from, {replace: true});
 
     }
 
     return (
         <div>
-            <h2 className='text-primary text-center my-5'>Sign up</h2>
+            <h2 className='text-primary text-center my-5'>Log in</h2>
             <div className='d-flex justify-content-center mx-auto'>
             <Form onSubmit={(e)=> handleSignIn(e)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

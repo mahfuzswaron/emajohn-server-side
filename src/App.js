@@ -9,6 +9,7 @@ import Login from './components/shared/Login/Login';
 import SignUp from './components/shared/SignUp/SignUp';
 
 import { Route, Routes } from 'react-router-dom';
+import RequireAuth from './components/shared/RequireAuth/RequireAuth';
 function App() {
   return (
     <>
@@ -17,6 +18,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/checkout/:service' element={<CheckOut></CheckOut>}></Route>
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
