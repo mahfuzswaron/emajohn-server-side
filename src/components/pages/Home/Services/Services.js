@@ -14,7 +14,7 @@ const Services = () => {
 
     return (
         <div>
-             <h2 className='text-center text-primary mt-3 mb-5'>SERVICES: {services.length}</h2>
+             <h2 className='text-center text-primary mt-5 mb-5'>SERVICES: {services.length}</h2>
              <div className='container'>
              <Row xs={1} md={2} lg={3} className="">
              {
