@@ -18,7 +18,7 @@ const RequireAuth = ({children}) => {
 
     
 
-    return children
+    return children;
 };
 
 export default RequireAuth;
