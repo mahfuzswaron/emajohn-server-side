@@ -15,7 +15,7 @@ const Service = ({service}) => {
                 {description}
                 <span>Fees: ${fees}</span>
                 </Card.Text>
-                <Button variant="primary" onClick={()=> navigate(`/checkout/${service.title}`)}>Procced</Button>
+                <Button variant="primary" onClick={()=> navigate(`/checkout/${service.title}`)}>Proceed</Button>
                 </Card.Body>
             </Card>
         </div>

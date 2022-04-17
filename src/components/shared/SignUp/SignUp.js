@@ -1,8 +1,46 @@
 import React from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+    const handleSignUp = (e) =>{
+        e.preventDefault();
+
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        console.log(name, email)
+    }
+
     return (
         <div>
+            <h2 className='text-primary text-center my-5'>Sign up</h2>
+            <div className='d-flex justify-content-center mx-auto'>
+            <Form onSubmit={(e)=> handleSignUp(e)}>
+                <Form.Group className="mb-3" controlId="formBasicText">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control type="text" name='name' placeholder="Enter your name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" name='email' placeholder="Enter email" />
+                    <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" name='password' placeholder="Password" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" name='checkbox' label="Accept terms and conditions" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Sign up
+                </Button>
+            </Form>
+            </div>
+            <p className='text-center'>Already have an account? <Link className='text-decoration-none' to='/login'>Login here</Link> </p>
             
         </div>
     );
