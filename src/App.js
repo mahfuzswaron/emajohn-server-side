@@ -10,7 +10,7 @@ import SignUp from './components/shared/SignUp/SignUp';
 
 import { Route, Routes } from 'react-router-dom';
 import RequireAuth from './components/shared/RequireAuth/RequireAuth';
-import Blog from './components/pages/Blog/Blog';
+import Blogs from './components/pages/Blog/Blogs';
 function App() {
   return (
     <>
@@ -31,7 +31,7 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

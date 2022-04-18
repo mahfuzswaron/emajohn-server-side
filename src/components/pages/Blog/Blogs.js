@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Accordion from './Accordion/Accordion';
+import Blog from './Blog/Blog';
 
-const Blog = () => {
+const Blogs = () => {
     const [qna, setQna] = useState([]);
 
     useEffect(()=>{
@@ -15,14 +15,14 @@ const Blog = () => {
             <h1 className='text-center mt-4'>BLOGS ({qna.length})</h1>
             <div>
             {
-               qna.map(q => <Accordion
+               qna.map(q => <Blog
                 key={q.question}
                 qna={q}
-               ></Accordion>)
+               ></Blog>)
             }
             </div>
         </div>
     );
 };
 
-export default Blog;
+export default Blogs;
