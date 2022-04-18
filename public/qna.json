@@ -5,10 +5,10 @@
     },
     {
         "question":"Why Firebase? Is there any alternative of it?",
-        "answer": "Firebase is a trusted website for managing authentication in any app. It lets us manage all the authenticational functionality. Its speciality is it has plenty sign in methods. It works even online. /n some alternatives: /n Back4App, AWS Amplify, Kuzzle, Couchbase etc."
+        "answer": "Firebase is a trusted website for managing authentication in any app. It lets us manage all the authenticational functionality. Its speciality is it has plenty sign in methods. It works even online. some alternatives: Back4App, AWS Amplify, Kuzzle, Couchbase etc."
     },
     {
         "question":"What does firebase provide than Authentication?",
-        "answer": "Firebase provides many features then Authentication. These are: Cloud Firestore, Cloud Functions, Hosting, Cloud Storage, Google Analytics, Predictions and Cloud Messaging."
+        "answer":"Firebase provides many features then Authentication. These are: Cloud Firestore, Cloud Functions, Hosting, Cloud Storage, Google Analytics, Predictions and Cloud Messaging."
     }
 ]

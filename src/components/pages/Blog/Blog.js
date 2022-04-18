@@ -12,13 +12,15 @@ const Blog = () => {
 
     return (
         <div>
-            <h1>BLOGS ({qna.length})</h1>
+            <h1 className='text-center mt-4'>BLOGS ({qna.length})</h1>
+            <div>
             {
                qna.map(q => <Accordion
                 key={q.question}
                 qna={q}
                ></Accordion>)
             }
+            </div>
         </div>
     );
 };
