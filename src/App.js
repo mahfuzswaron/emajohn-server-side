@@ -23,7 +23,7 @@ function App() {
             <CheckOut></CheckOut>
           </RequireAuth>
         }></Route>
-        <Route path='/checkout/:service' element={
+        <Route path='/checkout/:id' element={
           <RequireAuth>
             <CheckOut></CheckOut>
           </RequireAuth>
