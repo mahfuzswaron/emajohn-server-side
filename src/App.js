@@ -11,6 +11,7 @@ import SignUp from './components/shared/SignUp/SignUp';
 import { Route, Routes } from 'react-router-dom';
 import RequireAuth from './components/shared/RequireAuth/RequireAuth';
 import Blogs from './components/pages/Blog/Blogs';
+import AddService from './components/AddService/AddService';
 function App() {
   return (
     <>
@@ -26,6 +27,11 @@ function App() {
         <Route path='/checkout/:id' element={
           <RequireAuth>
             <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addservice' element={
+          <RequireAuth>
+            <AddService></AddService>
           </RequireAuth>
         }></Route>
         <Route path='/about' element={<About></About>}></Route>
