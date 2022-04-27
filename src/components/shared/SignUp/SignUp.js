@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import {useCreateUserWithEmailAndPassword, useUpdateProfile} from 'react-firebase-hooks/auth';
 import auth from '../../shared/Firebase/Firebase.init';
+import axios from 'axios';
 const SignUp = () => {
     
     const [
@@ -37,6 +38,10 @@ const SignUp = () => {
 
        await createUserWithEmailAndPassword(email, password);
        await updateProfile({displayName: name});
+       const {data} = await axios.post('http://localhost:4000/getJwt', {email});
+        const accesstoken = data.accessToken;
+        await localStorage.setItem('accessToken', accesstoken);
+        console.log('successfully got token', accesstoken)
        navigate('/login');
 
     }

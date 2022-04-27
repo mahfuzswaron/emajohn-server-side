@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../shared/Firebase/Firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import axios from 'axios';
 
 const Login = () => {
     const [
@@ -29,15 +30,18 @@ const Login = () => {
         console.log(user);
         return <p>{user.user.displayName} is regestered</p>
     }
-    const handleSignIn = (e) =>{
+    const handleSignIn = async(e) =>{
         e.preventDefault();
 
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
 
-        signInWithEmailAndPassword(email, password)
-        navigate(from, {replace: true});
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:4000/getJwt', {email});
+        const accesstoken = data.accessToken;
+        await localStorage.setItem('accessToken', accesstoken);
+        await navigate(from, {replace: true});
 
     }
 

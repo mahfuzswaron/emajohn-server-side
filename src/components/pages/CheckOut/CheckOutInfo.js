@@ -19,24 +19,24 @@ const CheckOutInfo = ({service}) => {
         }
         console.log(order)
         // http://localhost:4000/orders
-        axios.post('http://localhost:4000/orders', order).then(res => console.log(res)).catch(error => console.log(error))
+        axios.post(`http://localhost:4000/orders`, order).then(res => console.log(res)).catch(error => console.log(error))
     }
     
     return (
-        <div>
-            <h3>Please Fllup this form</h3>
-            <form onSubmit={(e)=> handleSubmit(e)}>
-                <input className='w-50  mb-2' value={user?.displayName} type={'text'} name='name' placeholder='your name' required/>
-                <br/>
-                <input className='w-50  mb-2' value={user.email} type={'email'} name='email' placeholder='Email'readOnly disabled required/>
-                <br/>
-                <input className='w-50  mb-2' value={title} type={'text'} name='service' placeholder='service'readOnly disabled/>
-                <br/>
-                <input className='w-50 mb-2' type={'text'} name='address'  placeholder='address' required/>
-                <br/>
-                <input className='w-50  mb-2' type={'text'} value={user?.phone} name='phone' placeholder='phone'/>
-                <br/>
-                <input className='w-50  mb-2' type={'submit'} value='submit'/>
+        <div className=''>
+            <h3 className='text-primary text-center'>Please Fllup this form</h3>
+            <form className='d-flex flex-column align-items-center' onSubmit={(e)=> handleSubmit(e)}>
+                <input className='w-50 border-bottom p-1 bg-white mb-2' value={user?.displayName} type={'text'} name='name' placeholder='your name' required/>
+    
+                <input className='w-50 border-bottom p-1 bg-white  mb-2' value={user.email} type={'email'} name='email' placeholder='Email'readOnly disabled required/>
+                 
+                <input className='w-50 border-bottom p-1 bg-white  mb-2' value={title} type={'text'} name='service' placeholder='service'readOnly disabled/>
+                 
+                <input className='w-50 border-bottom p-1 bg-white mb-2' type={'text'} name='address'  placeholder='address' required/>
+                 
+                <input className='w-50 border-bottom p-1 bg-white  mb-2' type={'text'} value={user?.phone} name='phone' placeholder='phone'/>
+                 
+                <input className='w-50 border-bottom p-1 bg-white  mb-2' type={'submit'} value='submit'/>
             </form>
         </div>
     );
